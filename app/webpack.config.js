@@ -2,8 +2,8 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+const featuresPath = path.resolve(__dirname, 'src/features/')
 const milligramPath = path.resolve(__dirname, '../node_modules/milligram/dist/')
-console.log(path.resolve(__dirname, 'src/features/'))
 
 module.exports = {
   entry: './src/index',
@@ -15,7 +15,7 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js'],
     alias: {
       style: milligramPath,
-      features: path.resolve(__dirname, 'src/features/'),
+      features: featuresPath,
     },
   },
   optimization: {
@@ -33,7 +33,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
-        include: [milligramPath],
+        include: [featuresPath, milligramPath],
       },
     ],
   },

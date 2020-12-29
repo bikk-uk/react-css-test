@@ -1,0 +1,12 @@
+.button.primary {
+  background-color: #0a64b2;
+  border-color: #0a64b2;
+}
+.button.primary.button-clear,
+.button.primary.button-outline {
+  background-color: transparent;
+  color: #0a64b2;
+}
+.button.primary.button-clear {
+  border-color: transparent;
+}

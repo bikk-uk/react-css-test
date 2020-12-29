@@ -10,6 +10,7 @@ import GridTest from './grid/Grid'
 
 // Style
 import 'style/milligram.min.css'
+import './App.css'
 
 export function App(): React.ReactElement {
   const { pathname } = useLocation()
@@ -19,15 +20,15 @@ export function App(): React.ReactElement {
       <div>
         <Flex row justifySpaceAround style={{ marginTop: '2em' }}>
           <Link to='/flex'>
-            <button className={clsx('button', !pathname.startsWith('/flex') && 'button-outline')}>
+            <button className={clsx('button primary', !pathname.startsWith('/flex') && 'button-outline')}>
               @react-css/flex
             </button>
           </Link>
           <Link to='/'>
-            <button className={clsx('button', pathname !== '/' && 'button-outline')}>Home</button>
+            <button className={clsx('button primary', pathname !== '/' && 'button-outline')}>Home</button>
           </Link>
           <Link to='/grid'>
-            <button className={clsx('button', !pathname.startsWith('/grid') && 'button-outline')}>
+            <button className={clsx('button primary', !pathname.startsWith('/grid') && 'button-outline')}>
               @react-css/grid
             </button>
           </Link>
