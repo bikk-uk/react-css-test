@@ -18,6 +18,10 @@ module.exports = {
       features: featuresPath,
     },
   },
+  devServer: {
+    clientLogLevel: 'debug',
+    historyApiFallback: true,
+  },
   optimization: {
     minimize: true,
   },
