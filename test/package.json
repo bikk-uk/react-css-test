@@ -3,5 +3,13 @@
     "version": "0.1.0",
     "description": "Cypress tests for app",
     "license": "MIT",
-    "private": true
+    "private": true,
+    "scripts": {
+        "cy:open": "cypress open",
+        "cy:run": "cypress run"
+    },
+    "devDependencies": {
+        "cypress": "^6.2.0",
+        "eslint-plugin-cypress": "^2.11.2"
+    }
 }
