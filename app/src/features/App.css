@@ -10,3 +10,20 @@
 .button.primary.button-clear {
   border-color: transparent;
 }
+
+.button.secondary {
+  background-color: #0e6655;
+  border-color: #0e6655;
+}
+.button.secondary.button-clear,
+.button.secondary.button-outline {
+  background-color: transparent;
+  color: #0e6655;
+}
+.button.secondary.button-clear {
+  border-color: transparent;
+}
+.button.padded {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
