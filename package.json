@@ -7,5 +7,11 @@
   "workspaces": [
     "app",
     "test"
-  ]
+  ],
+  "scripts": {
+    "watch": "yarn workspace app watch",
+    "serve": "yarn workspace app serve",
+    "cy:open": "yarn workspace test cy:open",
+    "cy:run": "yarn workspace test cy:run"
+  }
 }
