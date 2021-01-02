@@ -3,3 +3,4 @@ node_modules
 
 app/dist
 test/cypress/videos
+test/debug.log
