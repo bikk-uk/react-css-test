@@ -2,15 +2,25 @@ describe('App loads as expected', () => {
   it('displays the flex, grid and home buttons', () => {
     cy.visit('/')
 
-    cy.contains('Home')
+    // defaults to the home button
+    cy.contains('Home').should('not.have.class', 'button-outline')
 
-    cy.contains('@react-css/flex').click()
+    // flex button
+    cy.contains('@react-css/flex')
+      .should('have.class', 'button-outline')
+      .click()
+      .should('not.have.class', 'button-outline')
     cy.url().should('include', '/flex')
 
-    cy.contains('@react-css/grid').click()
+    // grid button
+    cy.contains('@react-css/grid')
+      .should('have.class', 'button-outline')
+      .click()
+      .should('not.have.class', 'button-outline')
     cy.url().should('include', '/grid')
 
-    cy.contains('Home').click()
+    // home button
+    cy.contains('Home').should('have.class', 'button-outline').click().should('not.have.class', 'button-outline')
     cy.url().should('include', '/')
   })
 })
