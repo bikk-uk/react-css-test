@@ -9,7 +9,7 @@ import FlexItemWrapper from './FlexItemWrapper'
 type FlexDisplayType = 'container' | 'item'
 
 export function FlexWrapper(): React.ReactElement {
-  const [displayType, setDisplayType] = React.useState<FlexDisplayType>('item')
+  const [displayType, setDisplayType] = React.useState<FlexDisplayType>('container')
 
   const showContainer = React.useCallback(() => setDisplayType('container'), [setDisplayType])
   const showItem = React.useCallback(() => setDisplayType('item'), [setDisplayType])
