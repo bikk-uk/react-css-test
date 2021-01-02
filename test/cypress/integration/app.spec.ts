@@ -1,4 +1,4 @@
-describe('App loads as expected', () => {
+describe('App', () => {
   it('displays the flex, grid and home buttons', () => {
     cy.visit('/')
 
