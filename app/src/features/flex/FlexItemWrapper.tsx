@@ -102,7 +102,7 @@ export function FlexItemWrapper(): React.ReactElement {
       <Container>
         <Header title='Flex Item - alignSelf Warning' />
         <Flex data-testid='flex-item-alignSelf-warning-container'>
-          <Flex.Item data-testid='flex-item-alignSelf-warning' alignSelfStretch alignSelfAuto></Flex.Item>
+          <Flex.Item data-testid='flex-item-alignSelf-warning' alignSelfCenter alignSelfBaseline></Flex.Item>
         </Flex>
       </Container>
     </Flex>
