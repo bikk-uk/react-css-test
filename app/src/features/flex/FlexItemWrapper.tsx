@@ -48,13 +48,13 @@ export function FlexItemWrapper(): React.ReactElement {
       <Container>
         <Header title='Flex Item - basis' />
         <Flex data-testid='flex-item-basis-container'>
-          <Flex.Item data-testid='flex-item-basis' basis='revert'></Flex.Item>
+          <Flex.Item data-testid='flex-item-basis' basis={0}></Flex.Item>
         </Flex>
       </Container>
       <Container>
         <Header title='Flex Item - flex' />
         <Flex data-testid='flex-item-flex-container'>
-          <Flex.Item data-testid='flex-item-flex' flex='none'></Flex.Item>
+          <Flex.Item data-testid='flex-item-flex' flex='1 2 5px'></Flex.Item>
         </Flex>
       </Container>
       <Container>
