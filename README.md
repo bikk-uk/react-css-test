@@ -2,6 +2,8 @@
 
 Integration tests for **`@react-css`** packages
 
+[![react-css-test](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/detailed/hksco8&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/hksco8/runs)
+
 ### `app/`
 
 Contains a small React application that utilises all features of both the `@react-css/flex` and `@react-css/grid` packages.
