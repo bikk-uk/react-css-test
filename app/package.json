@@ -6,7 +6,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "watch": "webpack serve --mode development --hot",
+    "watch": "webpack serve --mode development --port 40000 --progress --hot",
     "clean": "rm -rf dist/",
     "update": "yarn upgrade --dev --scope @react-css --latest",
     "build": "yarn clean && webpack --mode production",
