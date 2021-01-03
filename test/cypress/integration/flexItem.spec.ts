@@ -11,6 +11,14 @@ describe('Flex Item', () => {
     cy.get(flexItem).should('not.have.css', 'display', 'flex')
   })
 
+  it('handles custom styles', () => {
+    goToFlexItem()
+
+    hasFlexContainer('flex-item-custom-styles-container')
+    const flexItem = '[data-testid="flex-item-custom-styles"]'
+    cy.get(flexItem).should('have.css', 'width', '1px').should('have.css', 'height', '2px')
+  })
+
   it('handles the order property', () => {
     goToFlexItem()
 

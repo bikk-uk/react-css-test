@@ -16,6 +16,17 @@ export default function FlexItemWrapper(): React.ReactElement {
         </Flex>
       </Container>
       <Container>
+        <Header title='Flex Item Custom Styles' />
+        <Flex data-testid='flex-item-custom-styles-container'>
+          <Flex.Item
+            data-testid='flex-item-custom-styles'
+            style={{
+              width: 1,
+              height: 2,
+            }}></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
         <Header title='Flex Item - order' />
         <Flex data-testid='flex-item-order-container'>
           <Flex.Item data-testid='flex-item-order' order={5}></Flex.Item>
