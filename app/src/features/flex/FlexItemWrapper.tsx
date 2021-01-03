@@ -4,12 +4,9 @@ import Flex from '@react-css/flex'
 
 // Components
 import Header from '../helpers/Header'
+import Container from '../helpers/Container'
 
-const Container = ({ children }: { children: React.ReactElement | React.ReactElement[] }) => (
-  <div className='container'>{children}</div>
-)
-
-export function FlexItemWrapper(): React.ReactElement {
+export default function FlexItemWrapper(): React.ReactElement {
   return (
     <Flex column>
       <Container>
@@ -99,5 +96,3 @@ export function FlexItemWrapper(): React.ReactElement {
     </Flex>
   )
 }
-
-export default FlexItemWrapper

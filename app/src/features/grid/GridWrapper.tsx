@@ -2,7 +2,7 @@
 import React from 'react'
 import { useRouteMatch } from 'react-router-dom'
 
-export function GridWrapper(): React.ReactElement {
+export default function GridWrapper(): React.ReactElement {
   const match = useRouteMatch()
 
   return (
@@ -12,5 +12,3 @@ export function GridWrapper(): React.ReactElement {
     </div>
   )
 }
-
-export default GridWrapper

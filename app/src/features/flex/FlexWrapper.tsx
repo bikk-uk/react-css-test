@@ -5,10 +5,11 @@ import clsx from 'clsx'
 
 // Components
 import FlexItemWrapper from './FlexItemWrapper'
+import FlexContainerWrapper from './FlexContainerWrapper'
 
 type FlexDisplayType = 'container' | 'item'
 
-export function FlexWrapper(): React.ReactElement {
+export default function FlexWrapper(): React.ReactElement {
   const [displayType, setDisplayType] = React.useState<FlexDisplayType>('container')
 
   const showContainer = React.useCallback(() => setDisplayType('container'), [setDisplayType])
@@ -28,9 +29,7 @@ export function FlexWrapper(): React.ReactElement {
           Flex Item
         </button>
       </Flex>
-      <div style={{ marginTop: '1em' }}> {displayType === 'item' ? <FlexItemWrapper /> : <span>Container</span>}</div>
+      <div style={{ marginTop: '1em' }}> {displayType === 'item' ? <FlexItemWrapper /> : <FlexContainerWrapper />}</div>
     </>
   )
 }
-
-export default FlexWrapper

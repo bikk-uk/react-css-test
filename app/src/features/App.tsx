@@ -12,7 +12,7 @@ import GridWrapper from './grid/GridWrapper'
 import 'style/milligram.min.css'
 import './App.css'
 
-export function App(): React.ReactElement {
+export default function App(): React.ReactElement {
   const { pathname } = useLocation()
 
   return (
@@ -52,5 +52,3 @@ export function App(): React.ReactElement {
     </>
   )
 }
-
-export default App
