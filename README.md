@@ -14,7 +14,7 @@ Contains Cypress tests to ensure both the `@react-css/flex` and `@react-css/grid
 
 ### Scripts
 
-`yarn test` build and run the test suite
+`yarn run:local` build and run the test suite
 
 `yarn app:serve` to build and host the application
 
