@@ -10,13 +10,13 @@ export default function FlexItemWrapper(): React.ReactElement {
   return (
     <Flex column>
       <Container>
-        <Header title='Flex Item Default' />
+        <Header title='Flex Item - Default' />
         <Flex data-testid='flex-item-default-container'>
           <Flex.Item data-testid='flex-item-default'></Flex.Item>
         </Flex>
       </Container>
       <Container>
-        <Header title='Flex Item Custom Styles' />
+        <Header title='Flex Item - Custom Styles' />
         <Flex data-testid='flex-item-custom-styles-container'>
           <Flex.Item
             data-testid='flex-item-custom-styles'
