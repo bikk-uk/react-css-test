@@ -6,7 +6,7 @@ interface Props {
 }
 
 export function Header({ title }: Props): React.ReactElement {
-  return <h4 style={{ marginBottom: 0, paddingTop: '0.5em' }}>{title}</h4>
+  return <h5 style={{ marginBottom: 0, paddingTop: '0.5em' }}>{title}</h5>
 }
 
 export default Header
