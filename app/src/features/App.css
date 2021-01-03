@@ -1,3 +1,19 @@
+.container {
+  height: 5em;
+  width: 100%;
+  margin-bottom: 1em;
+  border: 2px solid lightgray;
+  border-radius: 3px;
+}
+
+.button {
+  height: unset;
+}
+.button.padded {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
 .button.primary {
   background-color: #0a64b2;
   border-color: #0a64b2;
@@ -22,8 +38,4 @@
 }
 .button.secondary.button-clear {
   border-color: transparent;
-}
-.button.padded {
-  margin-left: 0.5em;
-  margin-right: 0.5em;
 }

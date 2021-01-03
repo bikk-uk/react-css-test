@@ -6,16 +6,7 @@ import Flex from '@react-css/flex'
 import Header from '../helpers/Header'
 
 const Container = ({ children }: { children: React.ReactElement | React.ReactElement[] }) => (
-  <div
-    style={{
-      height: '5em',
-      width: '100%',
-      marginBottom: '1em',
-      backgroundColor: 'lightgray',
-      borderRadius: '2px',
-    }}>
-    {children}
-  </div>
+  <div className='container'>{children}</div>
 )
 
 export function FlexItemWrapper(): React.ReactElement {
