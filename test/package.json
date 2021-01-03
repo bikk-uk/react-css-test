@@ -6,7 +6,8 @@
     "private": true,
     "scripts": {
         "cy:open": "cypress open",
-        "cy:run": "cypress run"
+        "cy:run": "cypress run",
+        "cy:ci": "cy:run --no-clipboard"
     },
     "devDependencies": {
         "cypress": "^6.2.0",

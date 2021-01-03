@@ -11,9 +11,11 @@
   "scripts": {
     "start": "yarn && yarn app:serve",
     "test": "start-test 40000 test:run",
+    "ci": "start-test 40000 test:ci",
     "app:watch": "yarn workspace app watch",
     "app:serve": "yarn workspace app serve",
     "test:open": "yarn workspace test cy:open",
-    "test:run": "yarn workspace test cy:run"
+    "test:run": "yarn workspace test cy:run",
+    "test:ci": "yarn workspace test cy:ci"
   }
 }

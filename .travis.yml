@@ -1,8 +1,5 @@
 language: node_js
 node_js:
-  - 12
-  - 14
-  - 15
   - node
   - lts/*
 os:
@@ -10,4 +7,4 @@ os:
 install:
   - yarn
 script:
-  - yarn test
+  - yarn ci
