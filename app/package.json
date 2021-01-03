@@ -9,7 +9,7 @@
     "watch": "webpack serve --mode development --hot",
     "clean": "rm -rf dist/",
     "build": "yarn clean && webpack --mode production",
-    "serve": "yarn build && serve dist --listen 40000",
+    "serve": "yarn build && serve dist --listen 40000 --no-clipboard",
     "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
   },
   "dependencies": {
