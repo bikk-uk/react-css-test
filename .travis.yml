@@ -9,8 +9,11 @@ addons:
   - firefox: latest
 jobs:
   include:
-    - stage: build
-      script: yarn
     - stage: test
-      script: yarn run:ci:chrome
-      script: yarn run:ci:firefox
+      script:
+        - yarn
+        - yarn run:ci:chrome
+    - stage: test
+      script:
+        - yarn
+        - yarn run:ci:firefox

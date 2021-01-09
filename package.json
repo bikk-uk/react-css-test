@@ -18,6 +18,8 @@
     "app:ci": "yarn workspace app ci",
     "test:open": "yarn workspace test cy:open",
     "test:run": "yarn workspace test cy:run",
-    "test:ci": "yarn workspace test cy:ci"
+    "test:ci": "yarn workspace test cy:ci",
+    "test:ci:chrome": "yarn workspace test cy:ci:chrome",
+    "test:ci:firefox": "yarn workspace test cy:ci:firefox"
   }
 }
