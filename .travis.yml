@@ -10,7 +10,7 @@ addons:
 jobs:
   include:
     - stage: build
-        script: yarn
+      script: yarn
     - stage: test
-        script: yarn run:ci:chrome
-        script: yarn run:ci:firefox
+      script: yarn run:ci:chrome
+      script: yarn run:ci:firefox
