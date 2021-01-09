@@ -11,6 +11,8 @@
   "scripts": {
     "run:local": "start-test app:serve 40000 test:run",
     "run:ci": "start-test app:ci 40000 test:ci",
+    "run:ci:chrome": "start-test app:ci 40000 test:ci:chrome",
+    "run:ci:firefox": "start-test app:ci 40000 test:ci:firefox",
     "app:watch": "yarn workspace app watch",
     "app:serve": "yarn workspace app serve",
     "app:ci": "yarn workspace app ci",

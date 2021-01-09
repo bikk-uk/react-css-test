@@ -7,7 +7,9 @@
     "scripts": {
         "cy:open": "cypress open",
         "cy:run": "cypress run",
-        "cy:ci": "cypress run --record"
+        "cy:ci": "cypress run --record",
+        "cy:ci:chrome": "cypress run --record --browser chrome",
+        "cy:ci:firefox": "cypress run --record --browser firefox"
     },
     "devDependencies": {
         "cypress": "^6.2.0",

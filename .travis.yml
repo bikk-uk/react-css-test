@@ -4,7 +4,13 @@ node_js:
   - lts/*
 os:
   - linux
-install:
-  - yarn
-script:
-  - yarn run:ci
+addons:
+  - chrome: stable
+  - firefox: latest
+jobs:
+  include:
+    - stage: build
+        script: yarn
+    - stage: test
+        script: yarn run:ci:chrome
+        script: yarn run:ci:firefox
