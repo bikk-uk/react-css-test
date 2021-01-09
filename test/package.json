@@ -7,9 +7,9 @@
     "scripts": {
         "cy:open": "cypress open",
         "cy:run": "cypress run",
-        "cy:ci": "cypress run --record --browser electron --group Linux/Electron",
-        "cy:ci:chrome": "cypress run --record --browser chrome --group Linux/Chrome",
-        "cy:ci:firefox": "cypress run --record --browser firefox --group Linux/Firefox"
+        "cy:ci": "cypress run --parallel --record --browser electron --group Linux/Electron",
+        "cy:ci:chrome": "cypress run --parallel --record --browser chrome --group Linux/Chrome",
+        "cy:ci:firefox": "cypress run --parallel --record --browser firefox --group Linux/Firefox"
     },
     "devDependencies": {
         "cypress": "^6.2.1",
