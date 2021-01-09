@@ -12,6 +12,10 @@ jobs:
     - stage: test
       script:
         - yarn
+        - yarn run:ci
+    - stage: test
+      script:
+        - yarn
         - yarn run:ci:chrome
     - stage: test
       script:
