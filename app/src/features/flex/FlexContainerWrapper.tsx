@@ -57,6 +57,12 @@ export default function FlexContainerWrapper(): React.ReactElement {
           <Flex.Item></Flex.Item>
         </Flex>
       </Container>
+      <Container>
+        <Header title='flexDirection Warning' />
+        <Flex data-testid='flex-container-flexDirection-warning' column columnReverse>
+          <Flex.Item></Flex.Item>
+        </Flex>
+      </Container>
     </Flex>
   )
 }
