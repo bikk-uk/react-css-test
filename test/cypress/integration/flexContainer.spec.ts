@@ -57,8 +57,7 @@ describe('Flex Container', () => {
     isFlexContainerAnd('flex-container-flexDirection-warning').should('have.css', 'flex-direction', 'column')
 
     cy.window().then((win) => {
-      expect(win.console.error).to.have.callCount(0)
-      expect(win.console.warn).to.have.callCount(1)
+      expect(win.console.error).not.to.be.called
       expect(win.console.warn).to.have.been.calledWith(
         '[@react-css/flex] Multiple values have been provided for flex-direction.',
       )
