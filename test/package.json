@@ -1,19 +1,19 @@
 {
-    "name": "test",
-    "version": "0.1.0",
-    "description": "Cypress tests for app",
-    "license": "MIT",
-    "private": true,
-    "scripts": {
-        "cy:open": "cypress open",
-        "cy:run": "cypress run",
-        "cy:ci": "cypress run --parallel --record --browser electron --group Linux/Electron",
-        "cy:ci:chrome": "cypress run --parallel --record --browser chrome --group Linux/Chrome",
-        "cy:ci:firefox": "cypress run --parallel --record --browser firefox --group Linux/Firefox"
-    },
-    "devDependencies": {
-        "cypress": "^6.2.1",
-        "eslint-plugin-cypress": "^2.11.2",
-        "start-server-and-test": "^1.11.7"
-    }
+  "name": "test",
+  "version": "0.1.0",
+  "description": "Cypress tests for app",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:ci": "cypress run --parallel --record --browser electron --group Linux/Electron",
+    "cy:ci:chrome": "cypress run --parallel --record --browser chrome --group Linux/Chrome",
+    "cy:ci:firefox": "cypress run --parallel --record --browser firefox --group Linux/Firefox"
+  },
+  "devDependencies": {
+    "cypress": "^6.8.0",
+    "eslint-plugin-cypress": "^2.11.2",
+    "start-server-and-test": "^1.12.1"
+  }
 }
