@@ -1,7 +1,7 @@
 // Libraries
 import React from 'react'
-import Flex from '@react-css/flex'
 import clsx from 'clsx'
+import Flex from '@react-css/flex'
 
 // Components
 import FlexItemWrapper from './FlexItemWrapper'

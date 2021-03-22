@@ -63,6 +63,30 @@ export default function FlexContainerWrapper(): React.ReactElement {
           <Flex.Item></Flex.Item>
         </Flex>
       </Container>
+      <Container>
+        <Header code title='flexWrap' />
+        <Flex data-testid='flex-container-flexWrap' flexWrap='nowrap'>
+          <Flex.Item></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
+        <Header code title='flexWrap: wrap' />
+        <Flex data-testid='flex-container-flexWrapWrap' wrap>
+          <Flex.Item></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
+        <Header code title='flexWrap: nowrap' />
+        <Flex data-testid='flex-container-flexWrapNoWrap' noWrap>
+          <Flex.Item></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
+        <Header code title='flexWrap: wrapReverse' />
+        <Flex data-testid='flex-container-flexWrapWrapReverse' wrapReverse>
+          <Flex.Item></Flex.Item>
+        </Flex>
+      </Container>
     </Flex>
   )
 }

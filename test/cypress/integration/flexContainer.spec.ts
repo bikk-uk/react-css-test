@@ -63,4 +63,20 @@ describe('Flex Container', () => {
       )
     })
   })
+
+  it('handles the flex-wrap property', () => {
+    isFlexContainerAnd('flex-container-flexWrap').should('have.css', 'flex-wrap', 'nowrap')
+  })
+
+  it('handles the flex-wrap wrap shortcut property', () => {
+    isFlexContainerAnd('flex-container-flexWrapWrap').should('have.css', 'flex-wrap', 'wrap')
+  })
+
+  it('handles the flex-wrap no-wrap shortcut property', () => {
+    isFlexContainerAnd('flex-container-flexWrapNoWrap').should('have.css', 'flex-wrap', 'nowrap')
+  })
+
+  it('handles the flex-wrap wrap-reverse shortcut property', () => {
+    isFlexContainerAnd('flex-container-flexWrapWrapReverse').should('have.css', 'flex-wrap', 'wrap-reverse')
+  })
 })
