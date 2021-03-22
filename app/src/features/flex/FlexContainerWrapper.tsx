@@ -123,6 +123,42 @@ export default function FlexContainerWrapper(): React.ReactElement {
           <Flex.Item></Flex.Item>
         </Flex>
       </Container>
+      <Container>
+        <Header code title='alignItems' />
+        <Flex data-testid='flex-container-alignItems' alignItems='flex-end'>
+          <Flex.Item></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
+        <Header code title='alignItems: alignItemsStart' />
+        <Flex data-testid='flex-container-alignItemsAlignItemsStart' alignItemsStart>
+          <Flex.Item></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
+        <Header code title='alignItems: alignItemsEnd' />
+        <Flex data-testid='flex-container-alignItemsAlignItemsEnd' alignItemsEnd>
+          <Flex.Item></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
+        <Header code title='alignItems: alignItemsCenter' />
+        <Flex data-testid='flex-container-alignItemsAlignItemsCenter' alignItemsCenter>
+          <Flex.Item></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
+        <Header code title='alignItems: alignItemsBaseline' />
+        <Flex data-testid='flex-container-alignItemsAlignItemsBaseline' alignItemsBaseline>
+          <Flex.Item></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
+        <Header code title='alignItems: alignItemsStretch' />
+        <Flex data-testid='flex-container-alignItemsAlignItemsStretch' alignItemsStretch>
+          <Flex.Item></Flex.Item>
+        </Flex>
+      </Container>
     </Flex>
   )
 }

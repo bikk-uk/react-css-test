@@ -99,8 +99,32 @@ describe('Flex Container', () => {
   it('handles the justify-content space-between shortcut property', () => {
     isFlexContainerAnd('flex-container-justifyContentJustifySpaceBetween').should('have.css', 'justify-content', 'space-between')
   })
-  
+
   it('handles the justify-content space-around shortcut property', () => {
     isFlexContainerAnd('flex-container-justifyContentJustifySpaceAround').should('have.css', 'justify-content', 'space-around')
+  })
+
+  it('handles the align-items property', () => {
+    isFlexContainerAnd('flex-container-alignItems').should('have.css', 'align-items', 'flex-end')
+  })
+
+  it('handles the align-items flex-start shortcut property', () => {
+    isFlexContainerAnd('flex-container-alignItemsAlignItemsStart').should('have.css', 'align-items', 'flex-start')
+  })
+
+  it('handles the align-items flex-end shortcut property', () => {
+    isFlexContainerAnd('flex-container-alignItemsAlignItemsEnd').should('have.css', 'align-items', 'flex-end')
+  })
+
+  it('handles the align-items center shortcut property', () => {
+    isFlexContainerAnd('flex-container-alignItemsAlignItemsCenter').should('have.css', 'align-items', 'center')
+  })
+
+  it('handles the align-items baseline shortcut property', () => {
+    isFlexContainerAnd('flex-container-alignItemsAlignItemsBaseline').should('have.css', 'align-items', 'baseline')
+  })
+
+  it('handles the align-items stretch shortcut property', () => {
+    isFlexContainerAnd('flex-container-alignItemsAlignItemsStretch').should('have.css', 'align-items', 'stretch')
   })
 })
