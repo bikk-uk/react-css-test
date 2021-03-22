@@ -87,6 +87,42 @@ export default function FlexContainerWrapper(): React.ReactElement {
           <Flex.Item></Flex.Item>
         </Flex>
       </Container>
+      <Container>
+        <Header code title='justifyContent' />
+        <Flex data-testid='flex-container-justifyContent' justifyContent='flex-start'>
+          <Flex.Item></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
+        <Header code title='justifyContent: justifyStart' />
+        <Flex data-testid='flex-container-justifyContentJustifyStart' justifyStart>
+          <Flex.Item></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
+        <Header code title='justifyContent: justifyEnd' />
+        <Flex data-testid='flex-container-justifyContentJustifyEnd' justifyEnd>
+          <Flex.Item></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
+        <Header code title='justifyContent: justifyCenter' />
+        <Flex data-testid='flex-container-justifyContentJustifyCenter' justifyCenter>
+          <Flex.Item></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
+        <Header code title='justifyContent: justifySpaceBetween' />
+        <Flex data-testid='flex-container-justifyContentJustifySpaceBetween' justifySpaceBetween>
+          <Flex.Item></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
+        <Header code title='justifyContent: justifySpaceAround' />
+        <Flex data-testid='flex-container-justifyContentJustifySpaceAround' justifySpaceAround>
+          <Flex.Item></Flex.Item>
+        </Flex>
+      </Container>
     </Flex>
   )
 }

@@ -79,4 +79,28 @@ describe('Flex Container', () => {
   it('handles the flex-wrap wrap-reverse shortcut property', () => {
     isFlexContainerAnd('flex-container-flexWrapWrapReverse').should('have.css', 'flex-wrap', 'wrap-reverse')
   })
+
+  it('handles the justify-content property', () => {
+    isFlexContainerAnd('flex-container-justifyContent').should('have.css', 'justify-content', 'flex-start')
+  })
+
+  it('handles the justify-content flex-start shortcut property', () => {
+    isFlexContainerAnd('flex-container-justifyContentJustifyStart').should('have.css', 'justify-content', 'flex-start')
+  })
+
+  it('handles the justify-content flex-end shortcut property', () => {
+    isFlexContainerAnd('flex-container-justifyContentJustifyEnd').should('have.css', 'justify-content', 'flex-end')
+  })
+
+  it('handles the justify-content center shortcut property', () => {
+    isFlexContainerAnd('flex-container-justifyContentJustifyCenter').should('have.css', 'justify-content', 'center')
+  })
+
+  it('handles the justify-content space-between shortcut property', () => {
+    isFlexContainerAnd('flex-container-justifyContentJustifySpaceBetween').should('have.css', 'justify-content', 'space-between')
+  })
+  
+  it('handles the justify-content space-around shortcut property', () => {
+    isFlexContainerAnd('flex-container-justifyContentJustifySpaceAround').should('have.css', 'justify-content', 'space-around')
+  })
 })
