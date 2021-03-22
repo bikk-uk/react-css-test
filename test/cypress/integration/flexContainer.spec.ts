@@ -97,11 +97,19 @@ describe('Flex Container', () => {
   })
 
   it('handles the justify-content space-between shortcut property', () => {
-    isFlexContainerAnd('flex-container-justifyContentJustifySpaceBetween').should('have.css', 'justify-content', 'space-between')
+    isFlexContainerAnd('flex-container-justifyContentJustifySpaceBetween').should(
+      'have.css',
+      'justify-content',
+      'space-between',
+    )
   })
 
   it('handles the justify-content space-around shortcut property', () => {
-    isFlexContainerAnd('flex-container-justifyContentJustifySpaceAround').should('have.css', 'justify-content', 'space-around')
+    isFlexContainerAnd('flex-container-justifyContentJustifySpaceAround').should(
+      'have.css',
+      'justify-content',
+      'space-around',
+    )
   })
 
   it('handles the align-items property', () => {
@@ -145,11 +153,19 @@ describe('Flex Container', () => {
   })
 
   it('handles the align-content space-between shortcut property', () => {
-    isFlexContainerAnd('flex-container-alignContentAlignContentSpaceBetween').should('have.css', 'align-content', 'space-between')
+    isFlexContainerAnd('flex-container-alignContentAlignContentSpaceBetween').should(
+      'have.css',
+      'align-content',
+      'space-between',
+    )
   })
 
   it('handles the align-content space-around shortcut property', () => {
-    isFlexContainerAnd('flex-container-alignContentAlignContentSpaceAround').should('have.css', 'align-content', 'space-around')
+    isFlexContainerAnd('flex-container-alignContentAlignContentSpaceAround').should(
+      'have.css',
+      'align-content',
+      'space-around',
+    )
   })
 
   it('handles the align-content stretch shortcut property', () => {
@@ -157,18 +173,14 @@ describe('Flex Container', () => {
   })
 
   it('handles the flex-flow property', () => {
-    switch(Cypress.browser.name) {
+    switch (Cypress.browser.name) {
       case 'firefox':
         isFlexContainerAnd('flex-container-flexFlow')
           .should('have.css', 'flex-direction', 'row')
           .should('have.css', 'flex-wrap', 'nowrap')
         break
       default:
-        isFlexContainerAnd('flex-container-flexFlow')
-          .should('have.css', 'flex-flow', 'row nowrap')
-
+        isFlexContainerAnd('flex-container-flexFlow').should('have.css', 'flex-flow', 'row nowrap')
     }
-    
   })
-
 })

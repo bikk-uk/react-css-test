@@ -52,5 +52,5 @@
     // add some style to errors and messages
     "pretty": true
   },
-  "include": ["src"]
+  "include": ["app/src", "test/src"]
 }
