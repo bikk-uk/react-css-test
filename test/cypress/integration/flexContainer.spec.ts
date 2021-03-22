@@ -127,4 +127,32 @@ describe('Flex Container', () => {
   it('handles the align-items stretch shortcut property', () => {
     isFlexContainerAnd('flex-container-alignItemsAlignItemsStretch').should('have.css', 'align-items', 'stretch')
   })
+
+  it('handles the align-content property', () => {
+    isFlexContainerAnd('flex-container-alignContent').should('have.css', 'align-content', 'space-around')
+  })
+
+  it('handles the align-content start shortcut property', () => {
+    isFlexContainerAnd('flex-container-alignContentAlignContentStart').should('have.css', 'align-content', 'flex-start')
+  })
+
+  it('handles the align-content end shortcut property', () => {
+    isFlexContainerAnd('flex-container-alignContentAlignContentEnd').should('have.css', 'align-content', 'flex-end')
+  })
+
+  it('handles the align-content center shortcut property', () => {
+    isFlexContainerAnd('flex-container-alignContentAlignContentCenter').should('have.css', 'align-content', 'center')
+  })
+
+  it('handles the align-content space-between shortcut property', () => {
+    isFlexContainerAnd('flex-container-alignContentAlignContentSpaceBetween').should('have.css', 'align-content', 'space-between')
+  })
+
+  it('handles the align-content space-around shortcut property', () => {
+    isFlexContainerAnd('flex-container-alignContentAlignContentSpaceAround').should('have.css', 'align-content', 'space-around')
+  })
+
+  it('handles the align-content stretch shortcut property', () => {
+    isFlexContainerAnd('flex-container-alignContentAlignContentStretch').should('have.css', 'align-content', 'stretch')
+  })
 })
