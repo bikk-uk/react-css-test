@@ -155,4 +155,9 @@ describe('Flex Container', () => {
   it('handles the align-content stretch shortcut property', () => {
     isFlexContainerAnd('flex-container-alignContentAlignContentStretch').should('have.css', 'align-content', 'stretch')
   })
+
+  it('handles the flex-flow property', () => {
+    isFlexContainerAnd('flex-container-flexFlow').should('have.css', 'flex-flow', 'row nowrap')
+  })
+
 })

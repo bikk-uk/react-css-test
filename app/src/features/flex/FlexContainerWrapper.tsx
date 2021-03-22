@@ -201,6 +201,12 @@ export default function FlexContainerWrapper(): React.ReactElement {
           <Flex.Item></Flex.Item>
         </Flex>
       </Container>
+      <Container>
+        <Header code title='flexFlow' />
+        <Flex data-testid='flex-container-flexFlow' flow='row nowrap' >
+          <Flex.Item></Flex.Item>
+        </Flex>
+      </Container>
     </Flex>
   )
 }
