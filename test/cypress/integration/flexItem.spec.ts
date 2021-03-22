@@ -43,11 +43,10 @@ describe('Flex Item', () => {
     cy.get(flexItem).should('have.css', 'flex-basis', '0px')
   })
 
-  it('handles the flex property shorthand', { browser: '!firefox' }, () => {
+  it('handles the flex property shorthand', () => {
     hasFlexContainer('flex-item-flex-container')
     const flexItem = '[data-testid="flex-item-flex"]'
     cy.get(flexItem)
-      .should('have.css', 'flex', '1 2 5px')
       .should('have.css', 'flex-grow', '1')
       .should('have.css', 'flex-shrink', '2')
       .should('have.css', 'flex-basis', '5px')

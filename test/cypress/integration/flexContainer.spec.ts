@@ -157,7 +157,18 @@ describe('Flex Container', () => {
   })
 
   it('handles the flex-flow property', () => {
-    isFlexContainerAnd('flex-container-flexFlow').should('have.css', 'flex-flow', 'row nowrap')
+    switch(Cypress.browser.name) {
+      case 'firefox':
+        isFlexContainerAnd('flex-container-flexFlow')
+          .should('have.css', 'flex-direction', 'row')
+          .should('have.css', 'flex-wrap', 'nowrap')
+        break
+      default:
+        isFlexContainerAnd('flex-container-flexFlow')
+          .should('have.css', 'flex-flow', 'row nowrap')
+
+    }
+    
   })
 
 })
