@@ -102,26 +102,4 @@ describe('Flex Item', () => {
     const flexItem = '[data-testid="flex-item-alignSelfStretch"]'
     cy.get(flexItem).should('have.css', 'align-self', 'stretch')
   })
-
-  it('displays a warning if duplicate shortcuts are used', () => {
-    Cypress.on('window:before:load', (win) => {
-      cy.spy(win.console, 'error')
-      cy.spy(win.console, 'warn')
-    })
-
-    goToFlexItem()
-
-    hasFlexContainer('flex-item-alignSelf-warning-container')
-    const flexItem = '[data-testid="flex-item-alignSelf-warning"]'
-
-    // the first style was applied, the duplicate was ignored
-    cy.get(flexItem).should('have.css', 'align-self', 'center')
-
-    cy.window().then((win) => {
-      expect(win.console.error).not.to.be.called
-      expect(win.console.warn).to.have.been.calledWith(
-        '[@react-css/flex] Multiple values have been provided for align-self.',
-      )
-    })
-  })
 })

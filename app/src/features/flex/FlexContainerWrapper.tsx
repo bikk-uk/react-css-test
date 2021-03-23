@@ -58,12 +58,6 @@ export default function FlexContainerWrapper(): React.ReactElement {
         </Flex>
       </Container>
       <Container>
-        <Header title='flexDirection Warning' />
-        <Flex data-testid='flex-container-flexDirection-warning' column columnReverse>
-          <Flex.Item></Flex.Item>
-        </Flex>
-      </Container>
-      <Container>
         <Header code title='flexWrap' />
         <Flex data-testid='flex-container-flexWrap' flexWrap='nowrap'>
           <Flex.Item></Flex.Item>

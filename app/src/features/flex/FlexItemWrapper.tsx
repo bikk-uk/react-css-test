@@ -98,12 +98,6 @@ export default function FlexItemWrapper(): React.ReactElement {
           <Flex.Item data-testid='flex-item-alignSelfStretch' alignSelfStretch></Flex.Item>
         </Flex>
       </Container>
-      <Container>
-        <Header title='alignSelf Warning' />
-        <Flex data-testid='flex-item-alignSelf-warning-container'>
-          <Flex.Item data-testid='flex-item-alignSelf-warning' alignSelfCenter alignSelfBaseline></Flex.Item>
-        </Flex>
-      </Container>
     </Flex>
   )
 }

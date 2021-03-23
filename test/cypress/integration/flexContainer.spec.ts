@@ -45,25 +45,6 @@ describe('Flex Container', () => {
     )
   })
 
-  it('displays a warning if duplicate flex-direction are used', () => {
-    Cypress.on('window:before:load', (win) => {
-      cy.spy(win.console, 'error')
-      cy.spy(win.console, 'warn')
-    })
-
-    goToFlexContainer()
-
-    // the first style was applied, the duplicate was ignored
-    isFlexContainerAnd('flex-container-flexDirection-warning').should('have.css', 'flex-direction', 'column')
-
-    cy.window().then((win) => {
-      expect(win.console.error).not.to.be.called
-      expect(win.console.warn).to.have.been.calledWith(
-        '[@react-css/flex] Multiple values have been provided for flex-direction.',
-      )
-    })
-  })
-
   it('handles the flex-wrap property', () => {
     isFlexContainerAnd('flex-container-flexWrap').should('have.css', 'flex-wrap', 'nowrap')
   })
