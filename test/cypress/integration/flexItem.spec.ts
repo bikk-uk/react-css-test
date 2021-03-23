@@ -1,6 +1,6 @@
 // Helpers
 import { goToFlexItem } from '../helpers/goTo'
-import hasFlexContainer from '../helpers/hasFlexContainer'
+import { hasFlexContainer } from '../helpers/hasContainer'
 
 describe('Flex Item', () => {
   beforeEach(() => {

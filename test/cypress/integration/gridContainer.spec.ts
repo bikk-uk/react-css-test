@@ -1,6 +1,6 @@
 // Helpers
 import { goToGridContainer } from '../helpers/goTo'
-import { isGridContainer, isGridContainerAnd } from '../helpers/isGridContainerAnd'
+import { isGridContainer, isGridContainerAnd } from '../helpers/isContainerAnd'
 
 describe('Grid Container', () => {
   beforeEach(() => {
