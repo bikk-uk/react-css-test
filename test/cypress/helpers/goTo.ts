@@ -27,3 +27,9 @@ export const goToGridContainer = (): void => {
   cy.contains('Grid Container').click()
   cy.url().should('include', '/grid')
 }
+
+export const goToGridItem = (): void => {
+  goToGrid()
+  cy.contains('Grid Item').click()
+  cy.url().should('include', '/grid')
+}
