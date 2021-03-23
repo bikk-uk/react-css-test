@@ -172,7 +172,7 @@ export default function GridContainerWrapper(): React.ReactElement {
       </Container>
       <Container>
         <Header code title='autoFlow' />
-        <Grid data-testid='grid-container-autoFlow' autoFlow='dense'>
+        <Grid data-testid='grid-container-autoFlow' autoFlow='row dense'>
           <Grid.Item></Grid.Item>
         </Grid>
       </Container>
