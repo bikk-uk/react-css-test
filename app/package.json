@@ -8,7 +8,7 @@
   "scripts": {
     "watch": "webpack serve --mode development --port 40000 --progress --hot",
     "clean": "rm -rf dist/",
-    "update": "yarn upgrade --dev --scope @react-css --latest",
+    "update": "yarn upgrade --scope @react-css --latest",
     "build": "yarn clean && webpack --mode production",
     "serve": "yarn build && serve dist --listen 40000 --no-clipboard",
     "ci": "yarn update && yarn serve",
