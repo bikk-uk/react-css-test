@@ -1065,21 +1065,21 @@
     "@nodelib/fs.scandir" "2.1.4"
     fastq "^1.6.0"
 
-"@react-css/flex@^1.4.3":
-  version "1.4.3"
-  resolved "https://registry.yarnpkg.com/@react-css/flex/-/flex-1.4.3.tgz#32ed9b172013c3cba0b50c6347b4de63bc890f4d"
-  integrity sha512-+Q/vDws7Hi419kXP1CUVVMBOebYjx4m8NC5XKufm79yJObx2ztLXiOIsNlzhPIL3An5udcbJWXHslny7N79yvg==
+"@react-css/flex@^1.4.4":
+  version "1.4.4"
+  resolved "https://registry.yarnpkg.com/@react-css/flex/-/flex-1.4.4.tgz#0e6012f43f7f896d6e3d131bdc1b64ad9b498106"
+  integrity sha512-QvKzmEswpjNHRncny+OSue9SzFV3Pqi0EInDt/SXsjH5tYVQN6tahD4TrZO8Qb9lItEEEGT98BLVr1xSmj/nyQ==
   dependencies:
-    react "^17.0.1"
-    react-dom "^17.0.1"
+    react "^17.0.2"
+    react-dom "^17.0.2"
 
-"@react-css/grid@^1.4.2":
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/@react-css/grid/-/grid-1.4.2.tgz#3aebc8dadc3f66f4af2925de1d80a9ca0f7c8eb2"
-  integrity sha512-mY6fyfDMAbRKduQHOsyab6zeXDm7bDeW1jIlu7pyBtrrg/3M9/0MSpHes0pKzUKfT51Cn/otgFn3FdU+lYpA7A==
+"@react-css/grid@^1.4.3":
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/@react-css/grid/-/grid-1.4.3.tgz#6a27c80f564f4ea61be1e6229812cee76a57e204"
+  integrity sha512-9aIVlhM8Cfct5Qz6JaL7cDumbpWcx0hEFUESYpN9nntZEFn34VlFPogphInqvI1RKgNSRfQxnPdj6aj6xBx+SA==
   dependencies:
-    react "^17.0.1"
-    react-dom "^17.0.1"
+    react "^17.0.2"
+    react-dom "^17.0.2"
 
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.1"
@@ -5587,15 +5587,6 @@ rc@^1.0.1, rc@^1.1.6:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-dom@^17.0.1:
-  version "17.0.1"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-17.0.1.tgz#1de2560474ec9f0e334285662ede52dbc5426fc6"
-  integrity sha512-6eV150oJZ9U2t9svnsspTMrWNyHc6chX0KzDeAOXftRa8bNeOKTTfCJ7KorIwenkHd2xqVTBTCZd79yk/lx/Ug==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    scheduler "^0.20.1"
-
 react-dom@^17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
@@ -5638,14 +5629,6 @@ react-router@5.2.0:
     react-is "^16.6.0"
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
-
-react@^17.0.1:
-  version "17.0.1"
-  resolved "https://registry.yarnpkg.com/react/-/react-17.0.1.tgz#6e0600416bd57574e3f86d92edba3d9008726127"
-  integrity sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
 
 react@^17.0.2:
   version "17.0.2"
@@ -5970,14 +5953,6 @@ safe-regex@^1.1.0:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
-
-scheduler@^0.20.1:
-  version "0.20.1"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.20.1.tgz#da0b907e24026b01181ecbc75efdc7f27b5a000c"
-  integrity sha512-LKTe+2xNJBNxu/QhHvDR14wUXHRQbVY5ZOYpOGWRzhydZUqrLb2JBvLPY7cAqFmqrWuDED0Mjk7013SZiOz6Bw==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
 
 scheduler@^0.20.2:
   version "0.20.2"
