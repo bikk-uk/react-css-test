@@ -31,7 +31,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Cypress - Chrome
+      - name: Cypress - Edge
         uses: cypress-io/github-action@v2
         with:
           group: 'Windows/Edge'
@@ -53,7 +53,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Cypress - Chrome
+      - name: Cypress - Firefox
         uses: cypress-io/github-action@v2
         with:
           group: 'Linux/Firefox'
