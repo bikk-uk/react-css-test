@@ -23,4 +23,5 @@ jobs:
           record: false
           project: ./test
           build: yarn
-          start: yarn run:ci:chrome
+          start: yarn app:ci
+          wait-on: 'http://localhost:40000'
