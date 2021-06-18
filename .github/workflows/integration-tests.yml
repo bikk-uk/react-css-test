@@ -12,14 +12,14 @@ jobs:
   test-chrome:
     runs-on: ubuntu-latest
     container: cypress/browsers:node14.16.0-chrome90-ff88
-  steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
 
-    - name: Cypress - Chrome
-      uses: cypress-io/github-action@v2
-      with:
-        browser: chrome
-        record: false
-        build: yarn
-        start: yarn run:ci:chrome
+      - name: Cypress - Chrome
+        uses: cypress-io/github-action@v2
+        with:
+          browser: chrome
+          record: false
+          build: yarn
+          start: yarn run:ci:chrome
