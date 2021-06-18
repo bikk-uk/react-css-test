@@ -11,15 +11,54 @@ on:
 jobs:
   test-chrome:
     runs-on: ubuntu-latest
-    container: cypress/browsers:node14.16.0-chrome90-ff88
+    container:
+      image: cypress/browsers:node14.16.0-chrome90-ff88
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-
       - name: Cypress - Chrome
         uses: cypress-io/github-action@v2
         with:
           browser: chrome
+          group: 'Linux/Chrome'
+          record: false
+          project: ./test
+          build: yarn
+          start: yarn app:ci
+          wait-on: 'http://localhost:40000'
+
+  test-firefox:
+    runs-on: ubuntu-latest
+    container:
+      image: cypress/browsers:node14.16.0-chrome90-ff88
+      options: --user 1001
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Cypress - Chrome
+        uses: cypress-io/github-action@v2
+        with:
+          browser: firefox
+          group: 'Linux/Firefox'
+          record: false
+          project: ./test
+          build: yarn
+          start: yarn app:ci
+          wait-on: 'http://localhost:40000'
+
+  test-edge:
+    runs-on: windows-latest
+    container:
+      image: cypress/browsers:node14.16.0-chrome90-ff88
+      options: --user 1001
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Cypress - Chrome
+        uses: cypress-io/github-action@v2
+        with:
+          browser: edge
+          group: 'Windows/Edge'
           record: false
           project: ./test
           build: yarn
