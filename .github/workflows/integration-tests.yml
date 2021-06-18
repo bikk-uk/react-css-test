@@ -11,8 +11,6 @@ on:
 jobs:
   test-chrome:
     runs-on: ubuntu-latest
-    container:
-      image: cypress/browsers:node14.16.0-chrome90-ff88
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -21,11 +19,33 @@ jobs:
         with:
           browser: chrome
           group: 'Linux/Chrome'
-          record: false
+          record: true
           project: ./test
           build: yarn
           start: yarn app:ci
           wait-on: 'http://localhost:40000'
+          env:
+            CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  test-edge:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Cypress - Chrome
+        uses: cypress-io/github-action@v2
+        with:
+          browser: edge
+          group: 'Windows/Edge'
+          record: true
+          project: ./test
+          build: yarn
+          start: yarn app:ci
+          wait-on: 'http://localhost:40000'
+          env:
+            CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   test-firefox:
     runs-on: ubuntu-latest
@@ -40,27 +60,11 @@ jobs:
         with:
           browser: firefox
           group: 'Linux/Firefox'
-          record: false
+          record: true
           project: ./test
           build: yarn
           start: yarn app:ci
           wait-on: 'http://localhost:40000'
-
-  test-edge:
-    runs-on: windows-latest
-    container:
-      image: cypress/browsers:node14.16.0-chrome90-ff88
-      options: --user 1001
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Cypress - Chrome
-        uses: cypress-io/github-action@v2
-        with:
-          browser: edge
-          group: 'Windows/Edge'
-          record: false
-          project: ./test
-          build: yarn
-          start: yarn app:ci
-          wait-on: 'http://localhost:40000'
+          env:
+            CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
