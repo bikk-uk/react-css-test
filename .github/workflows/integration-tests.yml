@@ -9,6 +9,10 @@ on:
 jobs:
   test-chrome:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false # if a test fails, don't cancel the others
+      matrix:
+        containers: [1, 2]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -17,6 +21,7 @@ jobs:
         with:
           #group: 'Linux/Chrome'
           browser: chrome
+          parallel: true
           project: ./test
           build: yarn
           start: yarn app:ci
@@ -24,6 +29,10 @@ jobs:
 
   test-edge:
     runs-on: windows-latest
+    strategy:
+      fail-fast: false # if a test fails, don't cancel the others
+      matrix:
+        containers: [1, 2]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -32,6 +41,7 @@ jobs:
         with:
           #group: 'Windows/Edge'
           browser: edge
+          parallel: true
           project: ./test
           build: yarn
           start: yarn app:ci
@@ -39,6 +49,10 @@ jobs:
 
   test-firefox:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false # if a test fails, don't cancel the others
+      matrix:
+        containers: [1, 2]
     container: # https://github.com/cypress-io/cypress-docker-images/tree/master/browsers
       image: cypress/browsers:node14.16.0-chrome90-ff88
       options: --user 1001
@@ -50,6 +64,7 @@ jobs:
         with:
           #group: 'Linux/Firefox'
           browser: firefox
+          parallel: true
           project: ./test
           build: yarn
           start: yarn app:ci
