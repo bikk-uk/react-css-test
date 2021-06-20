@@ -14,11 +14,13 @@ jobs:
       matrix:
         containers: [1, 2]
     steps:
-      - name: Checkout
+      - name: Checkout (${{ matrix.containers }})
         uses: actions/checkout@v2
-      - name: Cypress - Chrome
+      - name: Cypress - Chrome (${{ matrix.containers }})
         uses: cypress-io/github-action@v2
         with:
+          record: true
+          parallel: true
           #group: 'Linux/Chrome'
           browser: chrome
           parallel: true
@@ -34,14 +36,15 @@ jobs:
       matrix:
         containers: [1, 2]
     steps:
-      - name: Checkout
+      - name: Checkout (${{ matrix.containers }})
         uses: actions/checkout@v2
-      - name: Cypress - Edge
+      - name: Cypress - Edge (${{ matrix.containers }})
         uses: cypress-io/github-action@v2
         with:
+          record: true
+          parallel: true
           #group: 'Windows/Edge'
           browser: edge
-          parallel: true
           project: ./test
           build: yarn
           start: yarn app:ci
@@ -57,14 +60,15 @@ jobs:
       image: cypress/browsers:node14.16.0-chrome90-ff88
       options: --user 1001
     steps:
-      - name: Checkout
+      - name: Checkout (${{ matrix.containers }})
         uses: actions/checkout@v2
-      - name: Cypress - Firefox
+      - name: Cypress - Firefox (${{ matrix.containers }})
         uses: cypress-io/github-action@v2
         with:
+          record: true
+          parallel: true
           #group: 'Linux/Firefox'
           browser: firefox
-          parallel: true
           project: ./test
           build: yarn
           start: yarn app:ci
