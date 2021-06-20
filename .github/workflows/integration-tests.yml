@@ -15,7 +15,7 @@ jobs:
       - name: Cypress - Chrome
         uses: cypress-io/github-action@v2
         with:
-          group: 'Linux/Chrome'
+          #group: 'Linux/Chrome'
           browser: chrome
           project: ./test
           build: yarn
@@ -30,7 +30,7 @@ jobs:
       - name: Cypress - Edge
         uses: cypress-io/github-action@v2
         with:
-          group: 'Windows/Edge'
+          #group: 'Windows/Edge'
           browser: edge
           project: ./test
           build: yarn
@@ -48,7 +48,7 @@ jobs:
       - name: Cypress - Firefox
         uses: cypress-io/github-action@v2
         with:
-          group: 'Linux/Firefox'
+          #group: 'Linux/Firefox'
           browser: firefox
           project: ./test
           build: yarn
