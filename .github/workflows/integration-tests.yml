@@ -41,7 +41,7 @@ jobs:
           path: cypress/videos
     env:
       CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   test-edge:
     runs-on: windows-latest
@@ -77,7 +77,7 @@ jobs:
           path: cypress/videos
     env:
       CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   test-firefox:
     runs-on: ubuntu-latest
@@ -116,4 +116,4 @@ jobs:
           path: cypress/videos
     env:
       CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
