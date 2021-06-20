@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
   schedule:
-    - cron: '00 3 1,15 * *' # at the start and middle of the month in the early morning
+    - cron: '00 3 1 * *' # at the start of the month, in the early morning
 
 jobs:
   test-chrome:
