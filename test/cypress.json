@@ -1,6 +1,6 @@
 {
-    "projectId": "hksco8",
-    "baseUrl": "http://localhost:40000",
-    "integrationFolder": "cypress/integration",
-    "testFiles": "**/*.spec.ts"
+  "projectId": "hksco8",
+  "baseUrl": "http://localhost:40000",
+  "integrationFolder": "cypress/integration",
+  "testFiles": "**/*.spec.ts"
 }

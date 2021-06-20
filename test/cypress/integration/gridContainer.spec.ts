@@ -146,7 +146,13 @@ describe('Grid Container', () => {
   })
 
   it('handles the grid-auto-flow property', () => {
-    isGridContainerAnd('grid-container-autoFlow').should('have.css', 'grid-auto-flow', 'row dense')
+    switch (Cypress.browser.name) {
+      case 'firefox':
+        isGridContainerAnd('grid-container-autoFlow').should('have.css', 'grid-auto-flow', 'dense')
+        break
+      default:
+        isGridContainerAnd('grid-container-autoFlow').should('have.css', 'grid-auto-flow', 'row dense')
+    }
   })
 
   it('handles the grid-auto-flow row shortcut property', () => {
@@ -158,7 +164,13 @@ describe('Grid Container', () => {
   })
 
   it('handles the grid-auto-flow dense shortcut property', () => {
-    isGridContainerAnd('grid-container-autoFlowAutoFlowDense').should('have.css', 'grid-auto-flow', 'row dense')
+    switch (Cypress.browser.name) {
+      case 'firefox':
+        isGridContainerAnd('grid-container-autoFlowAutoFlowDense').should('have.css', 'grid-auto-flow', 'dense')
+        break
+      default:
+        isGridContainerAnd('grid-container-autoFlowAutoFlowDense').should('have.css', 'grid-auto-flow', 'row dense')
+    }
   })
 
   it('handles the grid-auto-rows property', () => {

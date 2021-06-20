@@ -1,0 +1,125 @@
+name: Integration Tests
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '00 3 1 * *' # at the start of the month, in the early morning
+
+jobs:
+  test-chrome:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false # if a test fails, don't cancel the others
+      matrix:
+        containers: [1, 2]
+    steps:
+      - name: Checkout (${{ matrix.containers }})
+        uses: actions/checkout@v2
+      - name: Cypress - Chrome (${{ matrix.containers }})
+        uses: cypress-io/github-action@v2
+        with:
+          record: true
+          parallel: true
+          group: 'Linux/Chrome'
+          browser: chrome
+          project: ./test
+          build: yarn
+          start: yarn app:ci
+          wait-on: 'http://localhost:40000'
+      - name: Upload Failed Screenshots (${{ matrix.containers }})
+        uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: test/cypress/screenshots
+          if-no-files-found: error
+      - name: Upload Test Video (${{ matrix.containers }})
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: cypress-videos
+          path: test/cypress/videos
+          if-no-files-found: ignore
+    env:
+      CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  test-edge:
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false # if a test fails, don't cancel the others
+      matrix:
+        containers: [1, 2]
+    steps:
+      - name: Checkout (${{ matrix.containers }})
+        uses: actions/checkout@v2
+      - name: Cypress - Edge (${{ matrix.containers }})
+        uses: cypress-io/github-action@v2
+        with:
+          record: true
+          parallel: true
+          group: 'Windows/Edge'
+          browser: edge
+          project: ./test
+          build: yarn
+          start: yarn app:ci
+          wait-on: 'http://localhost:40000'
+      - name: Upload Failed Screenshots (${{ matrix.containers }})
+        uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: test/cypress/screenshots
+          if-no-files-found: error
+      - name: Upload Test Video (${{ matrix.containers }})
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: cypress-videos
+          path: test/cypress/videos
+          if-no-files-found: ignore
+    env:
+      CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  test-firefox:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false # if a test fails, don't cancel the others
+      matrix:
+        containers: [1, 2]
+    container: # https://github.com/cypress-io/cypress-docker-images/tree/master/browsers
+      image: cypress/browsers:node14.16.0-chrome90-ff88
+      options: --user 1001
+    steps:
+      - name: Checkout (${{ matrix.containers }})
+        uses: actions/checkout@v2
+      - name: Cypress - Firefox (${{ matrix.containers }})
+        uses: cypress-io/github-action@v2
+        with:
+          record: true
+          parallel: true
+          group: 'Linux/Firefox'
+          browser: firefox
+          project: ./test
+          build: yarn
+          start: yarn app:ci
+          wait-on: 'http://localhost:40000'
+      - name: Upload Failed Screenshots (${{ matrix.containers }})
+        uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: /test/cypress/screenshots
+          if-no-files-found: error
+      - name: Upload Test Video (${{ matrix.containers }})
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: cypress-videos
+          path: test/cypress/videos
+          if-no-files-found: ignore
+    env:
+      CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
