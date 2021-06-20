@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
   schedule:
-    - cron: '00 3 1,15 * *' # At the start and middle of the month in the early morning
+    - cron: '00 3 1,15 * *' # at the start and middle of the month in the early morning
 
 jobs:
   test-chrome:
@@ -21,12 +21,27 @@ jobs:
         with:
           record: true
           parallel: true
-          #group: 'Linux/Chrome'
+          group: 'Linux/Chrome'
           browser: chrome
           project: ./test
           build: yarn
           start: yarn app:ci
           wait-on: 'http://localhost:40000'
+      - name: Upload Failed Screenshots (${{ matrix.containers }})
+        uses: actions/upload-artifact@v1
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+      - name: Upload Test Video (${{ matrix.containers }})
+        uses: actions/upload-artifact@v1
+        if: always()
+        with:
+          name: cypress-videos
+          path: cypress/videos
+    env:
+      CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }
 
   test-edge:
     runs-on: windows-latest
@@ -42,12 +57,27 @@ jobs:
         with:
           record: true
           parallel: true
-          #group: 'Windows/Edge'
+          group: 'Windows/Edge'
           browser: edge
           project: ./test
           build: yarn
           start: yarn app:ci
           wait-on: 'http://localhost:40000'
+      - name: Upload Failed Screenshots (${{ matrix.containers }})
+        uses: actions/upload-artifact@v1
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+      - name: Upload Test Video (${{ matrix.containers }})
+        uses: actions/upload-artifact@v1
+        if: always()
+        with:
+          name: cypress-videos
+          path: cypress/videos
+    env:
+      CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }
 
   test-firefox:
     runs-on: ubuntu-latest
@@ -66,9 +96,24 @@ jobs:
         with:
           record: true
           parallel: true
-          #group: 'Linux/Firefox'
+          group: 'Linux/Firefox'
           browser: firefox
           project: ./test
           build: yarn
           start: yarn app:ci
           wait-on: 'http://localhost:40000'
+      - name: Upload Failed Screenshots (${{ matrix.containers }})
+        uses: actions/upload-artifact@v1
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+      - name: Upload Test Video (${{ matrix.containers }})
+        uses: actions/upload-artifact@v1
+        if: always()
+        with:
+          name: cypress-videos
+          path: cypress/videos
+    env:
+      CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }
