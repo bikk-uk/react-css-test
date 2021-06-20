@@ -23,7 +23,6 @@ jobs:
           parallel: true
           #group: 'Linux/Chrome'
           browser: chrome
-          parallel: true
           project: ./test
           build: yarn
           start: yarn app:ci
