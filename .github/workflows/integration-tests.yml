@@ -28,13 +28,13 @@ jobs:
           start: yarn app:ci
           wait-on: 'http://localhost:40000'
       - name: Upload Failed Screenshots (${{ matrix.containers }})
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         if: failure()
         with:
           name: cypress-screenshots
           path: test/cypress/screenshots
       - name: Upload Test Video (${{ matrix.containers }})
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         if: always()
         with:
           name: cypress-videos
@@ -64,13 +64,13 @@ jobs:
           start: yarn app:ci
           wait-on: 'http://localhost:40000'
       - name: Upload Failed Screenshots (${{ matrix.containers }})
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         if: failure()
         with:
           name: cypress-screenshots
           path: test/cypress/screenshots
       - name: Upload Test Video (${{ matrix.containers }})
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         if: always()
         with:
           name: cypress-videos
@@ -103,13 +103,13 @@ jobs:
           start: yarn app:ci
           wait-on: 'http://localhost:40000'
       - name: Upload Failed Screenshots (${{ matrix.containers }})
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         if: failure()
         with:
           name: cypress-screenshots
           path: /test/cypress/screenshots
       - name: Upload Test Video (${{ matrix.containers }})
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         if: always()
         with:
           name: cypress-videos
