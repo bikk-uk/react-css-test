@@ -2,6 +2,7 @@
 
 Integration tests for **`@react-css`** packages
 
+[![Integration Tests](https://github.com/bikk-uk/react-css-test/actions/workflows/integration-tests.yml/badge.svg?branch=main)](https://github.com/bikk-uk/react-css-test/actions/workflows/integration-tests.yml)
 [![react-css-test](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/detailed/hksco8&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/hksco8/runs)
 
 ### `app/`
