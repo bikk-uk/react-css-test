@@ -33,12 +33,14 @@ jobs:
         with:
           name: cypress-screenshots
           path: test/cypress/screenshots
+          if-no-files-found: error
       - name: Upload Test Video (${{ matrix.containers }})
         uses: actions/upload-artifact@v2
         if: always()
         with:
           name: cypress-videos
           path: test/cypress/videos
+          if-no-files-found: ignore
     env:
       CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -69,12 +71,14 @@ jobs:
         with:
           name: cypress-screenshots
           path: test/cypress/screenshots
+          if-no-files-found: error
       - name: Upload Test Video (${{ matrix.containers }})
         uses: actions/upload-artifact@v2
         if: always()
         with:
           name: cypress-videos
           path: test/cypress/videos
+          if-no-files-found: ignore
     env:
       CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -108,12 +112,14 @@ jobs:
         with:
           name: cypress-screenshots
           path: /test/cypress/screenshots
+          if-no-files-found: error
       - name: Upload Test Video (${{ matrix.containers }})
         uses: actions/upload-artifact@v2
         if: always()
         with:
           name: cypress-videos
           path: test/cypress/videos
+          if-no-files-found: ignore
     env:
       CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
