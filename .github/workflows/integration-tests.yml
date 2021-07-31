@@ -90,7 +90,7 @@ jobs:
       matrix:
         containers: [1, 2]
     container: # https://github.com/cypress-io/cypress-docker-images/tree/master/browsers
-      image: cypress/browsers:node14.16.0-chrome90-ff88
+      image: cypress/browsers:node14.17.0-chrome91-ff89
       options: --user 1001
     steps:
       - name: Checkout (${{ matrix.containers }})
