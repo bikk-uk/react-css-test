@@ -1361,18 +1361,18 @@
     "@nodelib/fs.scandir" "2.1.4"
     fastq "^1.6.0"
 
-"@react-css/flex@^1.4.5":
-  version "1.4.5"
-  resolved "https://registry.yarnpkg.com/@react-css/flex/-/flex-1.4.5.tgz#b37df3f1aeeb9b47362d5d83dac110ca0f37a6ca"
-  integrity sha512-6g06JSDE2OgBJRDwVOjarTAnfoMJ8Zmh5ghujhKub4t0QL4nEMcswtGbjQY46O4YkqS95EO4JDzicG++lzdIOQ==
+"@react-css/flex@^1.4.6":
+  version "1.4.6"
+  resolved "https://registry.yarnpkg.com/@react-css/flex/-/flex-1.4.6.tgz#52b3a3eaaeb1106b1e65adf5e2783a039763cc6f"
+  integrity sha512-6Or/pXqT/3Glif4VDRBeISVJWYbN8FNmcxa45gVriONLodH7E/WpoDf3ifYIjcs2GTIfcI1zTNlVPuovXuxmLg==
   dependencies:
     react "^17.0.2"
     react-dom "^17.0.2"
 
-"@react-css/grid@^1.4.4":
-  version "1.4.4"
-  resolved "https://registry.yarnpkg.com/@react-css/grid/-/grid-1.4.4.tgz#998307009cd2c4ed62b5521bc19af4200e58f410"
-  integrity sha512-8c14vWPaTPQjAhUR6ZV+isXUbqC1CPrfgURqBfUKS879Cl0HaZtT4Np4WkAjj3MN/h0jgb6/HhivLbSseHug5w==
+"@react-css/grid@^1.4.5":
+  version "1.4.5"
+  resolved "https://registry.yarnpkg.com/@react-css/grid/-/grid-1.4.5.tgz#172d88dd1e3611d28a2abac9897938b2e66ffa9b"
+  integrity sha512-8h90EGE8WjAdPny2N0RGL4WmUXlxusTPtnKbho+8EiUt0EoJkQtsJhhjzq7pD4DAh3JAYQGzWqcf/5T0anyQpQ==
   dependencies:
     react "^17.0.2"
     react-dom "^17.0.2"
