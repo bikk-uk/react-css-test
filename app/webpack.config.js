@@ -19,7 +19,6 @@ module.exports = {
     },
   },
   devServer: {
-    clientLogLevel: 'debug',
     historyApiFallback: true,
   },
   optimization: {
