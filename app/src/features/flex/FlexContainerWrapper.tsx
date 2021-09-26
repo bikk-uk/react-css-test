@@ -29,11 +29,7 @@ export default function FlexContainerWrapper(): React.ReactElement {
       </Container>
       <Container>
         <Header code title='gap' />
-        <Flex
-          data-testid='flex-container-gap'
-          style={{
-            gap: '10px',
-          }}>
+        <Flex data-testid='flex-container-gap' gap='10px'>
           <Flex.Item></Flex.Item>
         </Flex>
       </Container>

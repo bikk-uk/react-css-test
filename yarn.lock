@@ -1462,10 +1462,10 @@
     "@nodelib/fs.scandir" "2.1.4"
     fastq "^1.6.0"
 
-"@react-css/flex@^1.4.6":
-  version "1.4.6"
-  resolved "https://registry.yarnpkg.com/@react-css/flex/-/flex-1.4.6.tgz#52b3a3eaaeb1106b1e65adf5e2783a039763cc6f"
-  integrity sha512-6Or/pXqT/3Glif4VDRBeISVJWYbN8FNmcxa45gVriONLodH7E/WpoDf3ifYIjcs2GTIfcI1zTNlVPuovXuxmLg==
+"@react-css/flex@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@react-css/flex/-/flex-1.5.0.tgz#0fccb6e97ed3f78f79b0240a22cdf007832170ca"
+  integrity sha512-eLhIyEPlf3LhpkBVeBOqF7eSd2aEjPCLVkDqXErm7EKd+shuQs/6HPQkva95HCho9PUPfBaK6Flf3PBtMGOIXA==
   dependencies:
     react "^17.0.2"
     react-dom "^17.0.2"
