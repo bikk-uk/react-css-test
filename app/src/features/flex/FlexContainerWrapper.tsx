@@ -28,6 +28,36 @@ export default function FlexContainerWrapper(): React.ReactElement {
         </Flex>
       </Container>
       <Container>
+        <Header code title='gap' />
+        <Flex
+          data-testid='flex-container-gap'
+          style={{
+            gap: '10px',
+          }}>
+          <Flex.Item></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
+        <Header code title='rowGap' />
+        <Flex
+          data-testid='flex-container-rowGap'
+          style={{
+            rowGap: '50px',
+          }}>
+          <Flex.Item></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
+        <Header code title='columnGap' />
+        <Flex
+          data-testid='flex-container-columnGap'
+          style={{
+            columnGap: '100px',
+          }}>
+          <Flex.Item></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
         <Header code title='flexDirection' />
         <Flex data-testid='flex-container-flexDirection' flexDirection='row-reverse'>
           <Flex.Item></Flex.Item>

@@ -21,6 +21,26 @@ describe('Flex Container', () => {
     cy.get('[data-testid="flex-container-inline"]').should('have.css', 'display', 'inline-flex')
   })
 
+  it('handles the gap property', () => {
+    switch (Cypress.browser.name) {
+      case 'firefox':
+        isFlexContainerAnd('flex-container-gap')
+          .should('have.css', 'row-gap', '10px')
+          .should('have.css', 'column-gap', '10px')
+        break
+      default:
+        isFlexContainerAnd('flex-container-gap').should('have.css', 'gap', '10px')
+    }
+  })
+
+  it('handles the row-gap property', () => {
+    isFlexContainerAnd('flex-container-rowGap').should('have.css', 'row-gap', '50px')
+  })
+
+  it('handles the column-gap property', () => {
+    isFlexContainerAnd('flex-container-columnGap').should('have.css', 'column-gap', '100px')
+  })
+
   it('handles the flex-direction property', () => {
     isFlexContainerAnd('flex-container-flexDirection').should('have.css', 'flex-direction', 'row-reverse')
   })
