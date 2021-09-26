@@ -35,21 +35,13 @@ export default function FlexContainerWrapper(): React.ReactElement {
       </Container>
       <Container>
         <Header code title='rowGap' />
-        <Flex
-          data-testid='flex-container-rowGap'
-          style={{
-            rowGap: '50px',
-          }}>
+        <Flex data-testid='flex-container-rowGap' rowGap='50px'>
           <Flex.Item></Flex.Item>
         </Flex>
       </Container>
       <Container>
         <Header code title='columnGap' />
-        <Flex
-          data-testid='flex-container-columnGap'
-          style={{
-            columnGap: '100px',
-          }}>
+        <Flex data-testid='flex-container-columnGap' columnGap='100px'>
           <Flex.Item></Flex.Item>
         </Flex>
       </Container>
