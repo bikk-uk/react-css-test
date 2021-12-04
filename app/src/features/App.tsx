@@ -2,7 +2,7 @@
 import React from 'react'
 import clsx from 'clsx'
 import Flex from '@react-css/flex'
-import { Switch, Route, Link, useLocation } from 'react-router-dom'
+import { Route, Routes, Link, useLocation } from 'react-router-dom'
 
 // Components
 import FlexWrapper from './flex/FlexWrapper'
@@ -35,19 +35,18 @@ export default function App(): React.ReactElement {
         </Flex>
       </div>
       <div style={{ padding: '1em 2em 1em 2em' }}>
-        <Switch>
-          <Route exact path='/'>
-            <div style={{ textAlign: 'center' }}>
-              Testing Application for <code>@react-css</code> Packages
-            </div>
-          </Route>
-          <Route path='/flex'>
-            <FlexWrapper />
-          </Route>
-          <Route path='/grid'>
-            <GridWrapper />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route
+            path='/'
+            element={
+              <div style={{ textAlign: 'center' }}>
+                Testing Application for <code>@react-css</code> Packages
+              </div>
+            }
+          />
+          <Route path='/flex' element={<FlexWrapper />} />
+          <Route path='/grid' element={<GridWrapper />} />
+        </Routes>
       </div>
     </>
   )
