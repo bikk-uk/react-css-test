@@ -17,6 +17,38 @@ describe('Flex Container', () => {
       .should('have.css', 'height', '4px')
   })
 
+  it('handles being explicitly rendered as a <div />', () => {
+    isFlexContainerAnd('flex-container-as-div').should('have.prop', 'nodeName', 'DIV')
+  })
+
+  it('handles being rendered as a <nav />', () => {
+    isFlexContainerAnd('flex-container-as-nav').should('have.prop', 'nodeName', 'NAV')
+  })
+
+  it('handles being rendered as a <main />', () => {
+    isFlexContainerAnd('flex-container-as-main').should('have.prop', 'nodeName', 'MAIN')
+  })
+
+  it('handles being rendered as an <aside />', () => {
+    isFlexContainerAnd('flex-container-as-aside').should('have.prop', 'nodeName', 'ASIDE')
+  })
+
+  it('handles being rendered as an <article />', () => {
+    isFlexContainerAnd('flex-container-as-article').should('have.prop', 'nodeName', 'ARTICLE')
+  })
+
+  it('handles being rendered as a <header />', () => {
+    isFlexContainerAnd('flex-container-as-header').should('have.prop', 'nodeName', 'HEADER')
+  })
+
+  it('handles being rendered as a <section />', () => {
+    isFlexContainerAnd('flex-container-as-section').should('have.prop', 'nodeName', 'SECTION')
+  })
+
+  it('handles being rendered as a <footer />', () => {
+    isFlexContainerAnd('flex-container-as-footer').should('have.prop', 'nodeName', 'FOOTER')
+  })
+
   it('handles an inline flex container', () => {
     cy.get('[data-testid="flex-container-inline"]').should('have.css', 'display', 'inline-flex')
   })
