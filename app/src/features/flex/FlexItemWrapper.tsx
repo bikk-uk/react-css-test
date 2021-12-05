@@ -27,6 +27,54 @@ export default function FlexItemWrapper(): React.ReactElement {
         </Flex>
       </Container>
       <Container>
+        <Header code title='as <div />' />
+        <Flex data-testid='flex-item-as-div-container'>
+          <Flex.Item data-testid='flex-item-as-div' as='div'></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
+        <Header code title='as <nav />' />
+        <Flex data-testid='flex-item-as-nav-container'>
+          <Flex.Item data-testid='flex-item-as-nav' as='nav'></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
+        <Header code title='as <main />' />
+        <Flex data-testid='flex-item-as-main-container'>
+          <Flex.Item data-testid='flex-item-as-main' as='main'></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
+        <Header code title='as <aside />' />
+        <Flex data-testid='flex-item-as-aside-container'>
+          <Flex.Item data-testid='flex-item-as-aside' as='aside'></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
+        <Header code title='as <article />' />
+        <Flex data-testid='flex-item-as-article-container'>
+          <Flex.Item data-testid='flex-item-as-article' as='article'></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
+        <Header code title='as <header />' />
+        <Flex data-testid='flex-item-as-header-container'>
+          <Flex.Item data-testid='flex-item-as-header' as='header'></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
+        <Header code title='as <section />' />
+        <Flex data-testid='flex-item-as-section-container'>
+          <Flex.Item data-testid='flex-item-as-section' as='section'></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
+        <Header code title='as <footer />' />
+        <Flex data-testid='flex-item-as-footer-container'>
+          <Flex.Item data-testid='flex-item-as-footer' as='footer'></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
         <Header code title='order' />
         <Flex data-testid='flex-item-order-container'>
           <Flex.Item data-testid='flex-item-order' order={5}></Flex.Item>
