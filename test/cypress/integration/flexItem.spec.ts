@@ -19,6 +19,54 @@ describe('Flex Item', () => {
     cy.get(flexItem).should('have.css', 'width', '1px').should('have.css', 'height', '2px')
   })
 
+  it('handles being explicitly rendered as a <div />', () => {
+    hasFlexContainer('flex-item-as-div-container')
+    const flexItem = '[data-testid="flex-item-as-div"]'
+    cy.get(flexItem).should('have.prop', 'nodeName', 'DIV')
+  })
+
+  it('handles being rendered as a <nav />', () => {
+    hasFlexContainer('flex-item-as-nav-container')
+    const flexItem = '[data-testid="flex-item-as-nav"]'
+    cy.get(flexItem).should('have.prop', 'nodeName', 'NAV')
+  })
+
+  it('handles being rendered as a <main />', () => {
+    hasFlexContainer('flex-item-as-main-container')
+    const flexItem = '[data-testid="flex-item-as-main"]'
+    cy.get(flexItem).should('have.prop', 'nodeName', 'MAIN')
+  })
+
+  it('handles being rendered as an <aside />', () => {
+    hasFlexContainer('flex-item-as-aside-container')
+    const flexItem = '[data-testid="flex-item-as-aside"]'
+    cy.get(flexItem).should('have.prop', 'nodeName', 'ASIDE')
+  })
+
+  it('handles being rendered as an <article />', () => {
+    hasFlexContainer('flex-item-as-article-container')
+    const flexItem = '[data-testid="flex-item-as-article"]'
+    cy.get(flexItem).should('have.prop', 'nodeName', 'ARTICLE')
+  })
+
+  it('handles being rendered as a <header />', () => {
+    hasFlexContainer('flex-item-as-header-container')
+    const flexItem = '[data-testid="flex-item-as-header"]'
+    cy.get(flexItem).should('have.prop', 'nodeName', 'HEADER')
+  })
+
+  it('handles being rendered as a <section />', () => {
+    hasFlexContainer('flex-item-as-section-container')
+    const flexItem = '[data-testid="flex-item-as-section"]'
+    cy.get(flexItem).should('have.prop', 'nodeName', 'SECTION')
+  })
+
+  it('handles being rendered as a <footer />', () => {
+    hasFlexContainer('flex-item-as-footer-container')
+    const flexItem = '[data-testid="flex-item-as-footer"]'
+    cy.get(flexItem).should('have.prop', 'nodeName', 'FOOTER')
+  })
+
   it('handles the order property', () => {
     hasFlexContainer('flex-item-order-container')
     const flexItem = '[data-testid="flex-item-order"]'
