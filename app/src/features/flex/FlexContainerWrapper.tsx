@@ -28,6 +28,54 @@ export default function FlexContainerWrapper(): React.ReactElement {
         </Flex>
       </Container>
       <Container>
+        <Header code title='as <div />' />
+        <Flex data-testid='flex-container-as-div' as='div'>
+          <Flex.Item></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
+        <Header code title='as <nav />' />
+        <Flex data-testid='flex-container-as-nav' as='nav'>
+          <Flex.Item></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
+        <Header code title='as <main />' />
+        <Flex data-testid='flex-container-as-main' as='main'>
+          <Flex.Item></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
+        <Header code title='as <aside />' />
+        <Flex data-testid='flex-container-as-aside' as='aside'>
+          <Flex.Item></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
+        <Header code title='as <article />' />
+        <Flex data-testid='flex-container-as-article' as='article'>
+          <Flex.Item></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
+        <Header code title='as <header />' />
+        <Flex data-testid='flex-container-as-header' as='header'>
+          <Flex.Item></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
+        <Header code title='as <section />' />
+        <Flex data-testid='flex-container-as-section' as='section'>
+          <Flex.Item></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
+        <Header code title='as <footer />' />
+        <Flex data-testid='flex-container-as-footer' as='footer'>
+          <Flex.Item></Flex.Item>
+        </Flex>
+      </Container>
+      <Container>
         <Header code title='gap' />
         <Flex data-testid='flex-container-gap' gap='10px'>
           <Flex.Item></Flex.Item>
