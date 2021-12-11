@@ -20,6 +20,7 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           record: true
+          videoUploadOnPasses: false
           parallel: true
           group: 'Linux/Chrome'
           browser: chrome
@@ -58,6 +59,7 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           record: true
+          videoUploadOnPasses: false
           parallel: true
           group: 'Windows/Edge'
           browser: edge
@@ -99,6 +101,7 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           record: true
+          videoUploadOnPasses: false
           parallel: true
           group: 'Linux/Firefox'
           browser: firefox
