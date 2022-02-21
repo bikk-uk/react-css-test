@@ -19,6 +19,54 @@ describe('Grid Item', () => {
     cy.get(gridItem).should('have.css', 'width', '2px').should('have.css', 'height', '4px')
   })
 
+  it('handles being explicitly rendered as a <div />', () => {
+    hasGridContainer('grid-item-as-div-container')
+    const gridItem = '[data-testid="grid-item-as-div"]'
+    cy.get(gridItem).should('have.prop', 'nodeName', 'DIV')
+  })
+
+  it('handles being rendered as a <nav />', () => {
+    hasGridContainer('grid-item-as-nav-container')
+    const gridItem = '[data-testid="grid-item-as-nav"]'
+    cy.get(gridItem).should('have.prop', 'nodeName', 'NAV')
+  })
+
+  it('handles being rendered as a <main />', () => {
+    hasGridContainer('grid-item-as-main-container')
+    const gridItem = '[data-testid="grid-item-as-main"]'
+    cy.get(gridItem).should('have.prop', 'nodeName', 'MAIN')
+  })
+
+  it('handles being rendered as an <aside />', () => {
+    hasGridContainer('grid-item-as-aside-container')
+    const gridItem = '[data-testid="grid-item-as-aside"]'
+    cy.get(gridItem).should('have.prop', 'nodeName', 'ASIDE')
+  })
+
+  it('handles being rendered as an <article />', () => {
+    hasGridContainer('grid-item-as-article-container')
+    const gridItem = '[data-testid="grid-item-as-article"]'
+    cy.get(gridItem).should('have.prop', 'nodeName', 'ARTICLE')
+  })
+
+  it('handles being rendered as a <header />', () => {
+    hasGridContainer('grid-item-as-header-container')
+    const gridItem = '[data-testid="grid-item-as-header"]'
+    cy.get(gridItem).should('have.prop', 'nodeName', 'HEADER')
+  })
+
+  it('handles being rendered as a <section />', () => {
+    hasGridContainer('grid-item-as-section-container')
+    const gridItem = '[data-testid="grid-item-as-section"]'
+    cy.get(gridItem).should('have.prop', 'nodeName', 'SECTION')
+  })
+
+  it('handles being rendered as a <footer />', () => {
+    hasGridContainer('grid-item-as-footer-container')
+    const gridItem = '[data-testid="grid-item-as-footer"]'
+    cy.get(gridItem).should('have.prop', 'nodeName', 'FOOTER')
+  })
+
   it('handles the grid-column-start property', () => {
     hasGridContainer('grid-item-columnStart-container')
     const gridItem = '[data-testid="grid-item-columnStart"]'
