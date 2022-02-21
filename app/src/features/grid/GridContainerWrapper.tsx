@@ -29,6 +29,54 @@ export default function GridContainerWrapper(): React.ReactElement {
         </Grid>
       </Container>
       <Container>
+        <Header code title='as <div />' />
+        <Grid data-testid='grid-container-as-div' as='div'>
+          <Grid.Item></Grid.Item>
+        </Grid>
+      </Container>
+      <Container>
+        <Header code title='as <nav />' />
+        <Grid data-testid='grid-container-as-nav' as='nav'>
+          <Grid.Item></Grid.Item>
+        </Grid>
+      </Container>
+      <Container>
+        <Header code title='as <main />' />
+        <Grid data-testid='grid-container-as-main' as='main'>
+          <Grid.Item></Grid.Item>
+        </Grid>
+      </Container>
+      <Container>
+        <Header code title='as <aside />' />
+        <Grid data-testid='grid-container-as-aside' as='aside'>
+          <Grid.Item></Grid.Item>
+        </Grid>
+      </Container>
+      <Container>
+        <Header code title='as <article />' />
+        <Grid data-testid='grid-container-as-article' as='article'>
+          <Grid.Item></Grid.Item>
+        </Grid>
+      </Container>
+      <Container>
+        <Header code title='as <header />' />
+        <Grid data-testid='grid-container-as-header' as='header'>
+          <Grid.Item></Grid.Item>
+        </Grid>
+      </Container>
+      <Container>
+        <Header code title='as <section />' />
+        <Grid data-testid='grid-container-as-section' as='section'>
+          <Grid.Item></Grid.Item>
+        </Grid>
+      </Container>
+      <Container>
+        <Header code title='as <footer />' />
+        <Grid data-testid='grid-container-as-footer' as='footer'>
+          <Grid.Item></Grid.Item>
+        </Grid>
+      </Container>
+      <Container>
         <Header code title='rows' />
         <Grid data-testid='grid-container-rows' rows='2px 5px 4px'>
           <Grid.Item></Grid.Item>
