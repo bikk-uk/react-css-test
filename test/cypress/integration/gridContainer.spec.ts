@@ -17,6 +17,38 @@ describe('Grid Container', () => {
       .should('have.css', 'height', '6px')
   })
 
+  it('handles being explicitly rendered as a <div />', () => {
+    isGridContainerAnd('grid-container-as-div').should('have.prop', 'nodeName', 'DIV')
+  })
+
+  it('handles being rendered as a <nav />', () => {
+    isGridContainerAnd('grid-container-as-nav').should('have.prop', 'nodeName', 'NAV')
+  })
+
+  it('handles being rendered as a <main />', () => {
+    isGridContainerAnd('grid-container-as-main').should('have.prop', 'nodeName', 'MAIN')
+  })
+
+  it('handles being rendered as an <aside />', () => {
+    isGridContainerAnd('grid-container-as-aside').should('have.prop', 'nodeName', 'ASIDE')
+  })
+
+  it('handles being rendered as an <article />', () => {
+    isGridContainerAnd('grid-container-as-article').should('have.prop', 'nodeName', 'ARTICLE')
+  })
+
+  it('handles being rendered as a <header />', () => {
+    isGridContainerAnd('grid-container-as-header').should('have.prop', 'nodeName', 'HEADER')
+  })
+
+  it('handles being rendered as a <section />', () => {
+    isGridContainerAnd('grid-container-as-section').should('have.prop', 'nodeName', 'SECTION')
+  })
+
+  it('handles being rendered as a <footer />', () => {
+    isGridContainerAnd('grid-container-as-footer').should('have.prop', 'nodeName', 'FOOTER')
+  })
+
   it('handles an inline grid container', () => {
     cy.get('[data-testid="grid-container-inline"]').should('have.css', 'display', 'inline-grid')
   })
