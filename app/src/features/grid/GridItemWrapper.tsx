@@ -17,6 +17,54 @@ export default function GridItemWrapper(): React.ReactElement {
         </Grid>
       </Container>
       <Container>
+        <Header code title='as <div />' />
+        <Grid data-testid='grid-item-as-div-container'>
+          <Grid.Item data-testid='grid-item-as-div' as='div'></Grid.Item>
+        </Grid>
+      </Container>
+      <Container>
+        <Header code title='as <nav />' />
+        <Grid data-testid='grid-item-as-nav-container'>
+          <Grid.Item data-testid='grid-item-as-nav' as='nav'></Grid.Item>
+        </Grid>
+      </Container>
+      <Container>
+        <Header code title='as <main />' />
+        <Grid data-testid='grid-item-as-main-container'>
+          <Grid.Item data-testid='grid-item-as-main' as='main'></Grid.Item>
+        </Grid>
+      </Container>
+      <Container>
+        <Header code title='as <aside />' />
+        <Grid data-testid='grid-item-as-aside-container'>
+          <Grid.Item data-testid='grid-item-as-aside' as='aside'></Grid.Item>
+        </Grid>
+      </Container>
+      <Container>
+        <Header code title='as <article />' />
+        <Grid data-testid='grid-item-as-article-container'>
+          <Grid.Item data-testid='grid-item-as-article' as='article'></Grid.Item>
+        </Grid>
+      </Container>
+      <Container>
+        <Header code title='as <header />' />
+        <Grid data-testid='grid-item-as-header-container'>
+          <Grid.Item data-testid='grid-item-as-header' as='header'></Grid.Item>
+        </Grid>
+      </Container>
+      <Container>
+        <Header code title='as <section />' />
+        <Grid data-testid='grid-item-as-section-container'>
+          <Grid.Item data-testid='grid-item-as-section' as='section'></Grid.Item>
+        </Grid>
+      </Container>
+      <Container>
+        <Header code title='as <footer />' />
+        <Grid data-testid='grid-item-as-footer-container'>
+          <Grid.Item data-testid='grid-item-as-footer' as='footer'></Grid.Item>
+        </Grid>
+      </Container>
+      <Container>
         <Header title='Custom Styles' />
         <Grid data-testid='grid-item-custom-styles-container'>
           <Grid.Item
