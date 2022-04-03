@@ -5,14 +5,15 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "cy:open": "cypress open",
+    "cy:prune": "cypress cache prune",
+    "cy:open": "yarn cy:prune && cypress open",
     "cy:run": "cypress run",
     "cy:ci": "cypress run --parallel --record --browser electron --group Linux/Electron",
     "cy:ci:chrome": "cypress run --parallel --record --browser chrome --group Linux/Chrome",
     "cy:ci:firefox": "cypress run --parallel --record --browser firefox --group Linux/Firefox"
   },
   "devDependencies": {
-    "cypress": "^9.5.0",
+    "cypress": "^9.5.3",
     "eslint-plugin-cypress": "^2.12.1",
     "start-server-and-test": "^1.14.0"
   }
