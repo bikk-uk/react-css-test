@@ -13,8 +13,8 @@
     "cy:ci:firefox": "cypress run --parallel --record --browser firefox --group Linux/Firefox"
   },
   "devDependencies": {
-    "cypress": "^10.3.1",
-    "eslint-plugin-cypress": "^2.12.1",
-    "start-server-and-test": "^1.14.0"
+    "cypress": "^12.14.0",
+    "eslint-plugin-cypress": "^2.13.3",
+    "start-server-and-test": "^2.0.0"
   }
 }
