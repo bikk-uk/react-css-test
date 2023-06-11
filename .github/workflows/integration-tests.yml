@@ -15,7 +15,7 @@ jobs:
         containers: [1, 2]
     steps:
       - name: Checkout (${{ matrix.containers }})
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Cypress - Chrome (${{ matrix.containers }})
         uses: cypress-io/github-action@v4
         with:
@@ -28,14 +28,14 @@ jobs:
           start: yarn app:ci
           wait-on: 'http://localhost:40000'
       - name: Upload Failed Screenshots (${{ matrix.containers }})
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: failure()
         with:
           name: cypress-screenshots
           path: test/cypress/screenshots
           if-no-files-found: error
       - name: Upload Test Video (${{ matrix.containers }})
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: always()
         with:
           name: cypress-videos
@@ -53,7 +53,7 @@ jobs:
         containers: [1, 2]
     steps:
       - name: Checkout (${{ matrix.containers }})
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Cypress - Edge (${{ matrix.containers }})
         uses: cypress-io/github-action@v4
         with:
@@ -73,7 +73,7 @@ jobs:
           path: test/cypress/screenshots
           if-no-files-found: error
       - name: Upload Test Video (${{ matrix.containers }})
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: always()
         with:
           name: cypress-videos
@@ -90,11 +90,11 @@ jobs:
       matrix:
         containers: [1, 2]
     container: # https://github.com/cypress-io/cypress-docker-images/tree/master/browsers
-      image: cypress/browsers:node16.5.0-chrome94-ff93
+      image: cypress/browsers:node18.12.0-chrome106-ff106
       options: --user 1001
     steps:
       - name: Checkout (${{ matrix.containers }})
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Cypress - Firefox (${{ matrix.containers }})
         uses: cypress-io/github-action@v4
         with:
@@ -107,14 +107,14 @@ jobs:
           start: yarn app:ci
           wait-on: 'http://localhost:40000'
       - name: Upload Failed Screenshots (${{ matrix.containers }})
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: failure()
         with:
           name: cypress-screenshots
           path: /test/cypress/screenshots
           if-no-files-found: error
       - name: Upload Test Video (${{ matrix.containers }})
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: always()
         with:
           name: cypress-videos
