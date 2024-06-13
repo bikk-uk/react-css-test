@@ -9,17 +9,17 @@
     "test"
   ],
   "scripts": {
-    "run:local": "start-test app:serve 40000 test:run",
-    "run:ci": "start-test app:ci 40000 test:ci",
-    "run:ci:chrome": "start-test app:ci 40000 test:ci:chrome",
-    "run:ci:firefox": "start-test app:ci 40000 test:ci:firefox",
+    "run:local": "start-test app:serve 40000 cy:run",
+    "run:ci": "start-test app:ci 40000 cy:ci",
+    "run:ci:chrome": "start-test app:ci 40000 cy:ci:chrome",
+    "run:ci:firefox": "start-test app:ci 40000 cy:ci:firefox",
     "app:watch": "yarn workspace app watch",
     "app:serve": "yarn workspace app serve",
     "app:ci": "yarn workspace app ci",
-    "test:open": "yarn workspace test cy:open",
-    "test:run": "yarn workspace test cy:run",
-    "test:ci": "yarn workspace test cy:ci",
-    "test:ci:chrome": "yarn workspace test cy:ci:chrome",
-    "test:ci:firefox": "yarn workspace test cy:ci:firefox"
+    "cy:open": "yarn workspace test cy:open",
+    "cy:run": "yarn workspace test cy:run",
+    "cy:ci": "yarn workspace test cy:ci",
+    "cy:ci:chrome": "yarn workspace test cy:ci:chrome",
+    "cy:ci:firefox": "yarn workspace test cy:ci:firefox"
   }
 }

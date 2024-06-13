@@ -19,4 +19,4 @@ Contains Cypress tests to ensure both the `@react-css/flex` and `@react-css/grid
 
 `yarn app:serve` to build and host the application
 
-`yarn test:open` to run the Cypress tests against the running application
+`yarn cy:open` to run the Cypress tests against the running application
