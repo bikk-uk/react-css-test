@@ -1497,15 +1497,15 @@
   resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
   integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
 
-"@react-css/flex@^2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@react-css/flex/-/flex-2.2.0.tgz#7f16b2191a783845df5905b7873f68fc9c703632"
-  integrity sha512-gCrO4wDkV8ND4ZCfLXfQAhDcx+l3HVb8vWDc50IE/qJvqHmmgDQZHLZdTnIq+Xwrgf84PsOPxx/dQvMK1LfO/A==
+"@react-css/flex@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@react-css/flex/-/flex-2.3.0.tgz#051989bf3a5f4e09463dabc2ee458caa665706f6"
+  integrity sha512-shZsnRR1rJrenWqmg09+NcQjiK8c5pIqgMC6Ia6VsxiUOmEWgZrZy4wM3pai1TbFaQ0VBzd9+vigRA5xLDAAfw==
 
-"@react-css/grid@^2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@react-css/grid/-/grid-2.2.0.tgz#6ad93ecd515cb837ddf4fec9f8806f815198e239"
-  integrity sha512-jIcKOmyxBy5Np1x3Qk50muOhgbsdKkSbEVquWDqZYRxRh24rqJFOcvmuDwjBRaOc714sjk3rQuE4kpospMR7HQ==
+"@react-css/grid@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@react-css/grid/-/grid-2.3.0.tgz#bebade4daec5466e6a0285070ba5a667bf7f3e10"
+  integrity sha512-GkZjjTj/43XlfoGbbRgLPDJNRvM7kMgMpUNbrL4nrTR+Eq/dgAV/+01qbXcABbILcO8f6XJaw14lj2b4AqZsTQ==
 
 "@remix-run/router@1.16.1":
   version "1.16.1"
